@@ -1,0 +1,345 @@
+@charset "UTF-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+*{
+    box-sizing: border-box 
+}
+
+/*************************
+PRE LOADING PAGE
+/*************************/
+#button{
+	z-index: 3;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+	margin-top: -180px;
+}
+
+#button:hover {
+	transition-duration: 1s;
+	width: 25%;
+}
+
+#title{
+	max-width: 100%;
+}
+
+
+/*************************
+	MODAL
+/*************************/
+.modal-dialog {
+    max-width: 610px;
+    text-align: center;
+}
+
+#avatarModal h1{
+	color: #E243A2;
+	font-family: 'Baloo Bhaijaan 2';
+	font-weight: 800;
+}
+
+#avatarModal p{
+	color: #54352B;
+	font-family: 'Baloo Bhaijaan 2';
+	font-weight: 500;
+}
+
+
+/*************************
+	AVATAR CREATOR
+/*************************/
+body { 
+    background-image: url('../assets/bg.jpg');
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+/*outside*/
+#builder{
+    position: relative;
+}
+
+/*all internal customization divs need to be positioned absolute to stack them up*/
+#head, #eyes, #nose, #lips, #beard, #acc, #headpc, #mustache, #eyebrow{
+    position:absolute;
+    z-index: 1;
+    display: block;
+}
+
+#color-options{
+    position: absolute;
+	margin-bottom: 20px;
+    z-index: 5;
+    left: 38%;
+
+}
+
+.main-content{
+    max-width: 1280px;    
+}
+
+.my-container{
+    background-color: #fff;
+    border: 1.5px solid #54352B;
+    border-radius: 5pt;
+    box-shadow: -2px 2px #740E3D;
+    margin: auto;
+    padding: 20px;
+}
+
+
+/*************************
+	TITLE
+/*************************/
+.title-container{
+    background-color: #AA0367;
+    border: 1.5px solid #54352B;
+    border-radius: 5pt;
+    box-shadow: -2px 2px #740E3D;
+    margin: auto;
+    padding: 20px;
+	max-width: 80%;
+}
+
+.title-container p{
+	color: white;
+	text-shadow: -5px 5px #740E3D;
+	margin: 0px;
+	font-family: 'Baloo Bhaijaan 2';
+	font-weight: 800;
+	font-size: 90px;
+}
+
+
+/*************************
+	HEAD
+/*************************/
+.head-vessels{
+    margin: auto;
+    text-align: center;
+}
+
+.head-vessels img{
+    max-width: 100px;
+    height: auto;
+    margin-left: 15px;
+	margin-top: 15px;
+    display: inline-block;
+}
+
+
+/*************************
+	EYEBROW
+/*************************/
+.eyebrow-vessel{
+    text-align: center;
+    margin: auto;
+}
+
+.eyebrow-vessel img{
+    max-width: 90px;
+	margin: 10px 20px;
+    height: auto; 
+}
+
+
+/*************************
+	EYE
+/*************************/
+.eye-vessels{
+    text-align: center;
+    margin: auto;
+}
+.eye-vessels img{
+    max-width: 95px;
+	margin: 10px 10px;
+    height: auto;       
+}
+
+.eye-vessel-child .slick-slide img{
+    height: auto !important;
+    position: relative;
+    top: 15%;
+}
+
+.eye-vessel-child{
+    color: red;
+}
+
+
+/*************************
+	CAROUSEL
+/*************************/
+.slick-prev:before{
+    margin-right: 65px;
+    color: rgb(192, 192, 192);
+}
+.slick-next:before{
+    margin-left: 25px;
+    color: gray;
+}
+
+.slick-slide{
+    height: 70px;
+    display: flex;
+    text-align: center;
+    margin: auto;
+}
+
+
+/*************************
+	NOSE
+/*************************/
+.nose-vessel{
+    text-align: center;
+    margin: auto;
+}
+
+.nose-vessel img{
+    max-width: 40px;
+	margin: 10px 15px;
+    height: auto;
+}
+
+
+/*************************
+	LIPS
+/*************************/
+.lips-vessel{
+    text-align: center;
+	margin-left: 5px;
+    padding-top: 10px;
+}
+
+.lips-vessel img{
+    max-width: 45px; 
+    margin: 10px 5px;
+    height: auto;
+}
+
+.lips-vessel-child .slick-slide img{
+    height: auto !important;
+    position: relative;
+    top: 15%;
+}
+
+/*************************
+	SHADES
+/*************************/
+.shades-vessels{
+    text-align: center;
+    margin: auto;
+}
+
+.shades-vessel-child .slick-slide img{
+    max-width: 90px;
+    height: auto;
+    position: relative;
+    top: 27%;    
+}
+
+.shades-vessel-child{
+    color: red;
+}
+
+
+/*************************
+	MUSTACHE
+/*************************/
+.mustache-vessels{
+    text-align: center;
+    margin: auto;
+}
+.mustache-vessels img{
+    max-width: 80px;
+    margin: 10px 20px;
+    height: auto;
+	text-align: center;
+}
+
+.mustache-vessel-child .slick-slide img{
+    height: auto !important;
+    position: relative;
+    top: 15%;
+}
+
+
+/*************************
+	BEARD
+/*************************/
+.beard-vessels{
+    text-align: center;
+    margin: auto;
+}
+.beard-vessels img{
+    max-width: 80px;
+    margin: 10px 20px;
+    height: auto;
+	text-align: center;
+}
+
+.beard-vessel-child .slick-slide img{
+    max-width: 50px;
+    height: auto;
+    position: relative;
+    top: 15%;    
+}
+
+
+/*************************
+	HEADPC
+/*************************/
+.headpc-vessel{
+	margin: auto;
+    text-align: center;
+}
+
+.headpc-vessel img{
+    margin: 10px 10px;
+    max-width: 120px;
+    height: auto;    
+}
+
+/*************************
+	RESULT
+/*************************/
+.result{
+	margin: auto;
+	height: auto;
+	text-align: center;
+	background-color: #fff;
+    border: 1.5px solid #54352B;
+    border-radius: 5pt;
+    box-shadow: -2px 2px #740E3D;
+}
+
+#showcase-button{
+	margin: auto;
+	height: auto;
+	text-align: center;
+	background-color: #fff;
+    border: 1.5px solid #54352B;
+    border-radius: 5pt;
+    box-shadow: -2px 2px #740E3D;
+}
+
+.btn{
+	padding: 10px 20px;
+}
+
+
+
+/*************************
+	FOOTER
+/*************************/
+.footer{
+    padding: 20px;
+    max-width: 1280px;
+    margin: auto;
+    text-align: center;
+}

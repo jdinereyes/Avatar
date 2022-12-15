@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar Maker</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+   
+
+	<!-- My CSS -->
+	 <link href="css/avatarstyle.css" rel="stylesheet" type="text/css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> 
+
+    <script src ="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+</head>
+<body>
+    
+    <br>
+    <section>
+		<div class="title-container my-auto"> 
+			<div class="col-sm-12 text-center">
+			 <p>create your own avatar</p>
+			</div> 
+		</div>
+        <div class="container mx-auto my-auto">  
+
+            <br>
+            <div class="row main-content text-align-center mx-auto">
+                <div class="col-sm-6 mx-auto">
+                    <!--------------------
+                        HEAD CONTAINER
+                    ---------------------->                        
+                    <div class="my-container head-vessels">
+                        <img id="headIndicator" src="./images/heart.png" alt="heart" style="max-width: 24px;height: 24px;position: absolute;display: none;" />
+                        <img id="femalehead1" onClick="setHead('female_head_1.png', 'femalehead1')" src="images/thumbnails/head/th_female_head_1.png" alt="fhead1" >
+                        <img id="femalehead2" onClick="setHead('female_head_2.png', 'femalehead2')" src="images/thumbnails/head/th_female_head_2.png" alt="fhead2" >
+                        <img id="femalehead3" onClick="setHead('female_head_3.png', 'femalehead3')" src="images/thumbnails/head/th_female_head_3.png" alt="fhead3" >
+                        <img id="femalehead4" onClick="setHead('female_head_4.png', 'femalehead4')" src="images/thumbnails/head/th_female_head_4.png" alt="fhead4" >
+                        <br>
+                        <img id="malehead1" onClick="setHead('male_head_1.png', 'malehead1')" src="images/thumbnails/head/th_male_head_1.png" alt="mhead1" >
+                        <img id="malehead2" onClick="setHead('male_head_2.png', 'malehead2')" src="images/thumbnails/head/th_male_head_2.png" alt="mhead2" >
+                        <img id="malehead3" onClick="setHead('male_head_3.png', 'malehead3')" src="images/thumbnails/head/th_male_head_3.png" alt="mhead3" >
+                        <img id="malehead4" onClick ="setHead('male_head_4.png', 'malehead4')" src="images/thumbnails/head/th_male_head_4.png" alt="mhead4" >                        
+                    </div>
+                    <br>
+					
+					<!--------------------
+                        EYEBROW CONTAINER
+                    ---------------------->                        
+					<div class="my-container eyebrow-vessel" style="max-width: 660px;margin: auto;">
+                    <img id="eyeBrowIndicator" src="./images/heart.png" alt="heart" style="width: 15px;height: 15px;position: absolute;display: none;" />
+					<img id="eyebrow1" onClick="setEyebrow('eyebrow_1.png', 'eyebrow1')" src="images/thumbnails/eyebrow/th_eyebrow_1.png" alt="eb1" >
+					<img id="eyebrow2" onClick="setEyebrow('eyebrow_2.png', 'eyebrow2')" src="images/thumbnails/eyebrow/th_eyebrow_2.png" alt="eb2" >
+					<img id="eyebrow3" onClick="setEyebrow('eyebrow_3.png', 'eyebrow3')" src="images/thumbnails/eyebrow/th_eyebrow_3.png" alt="eb3" >
+					</div>
+					<br>
+					
+					<!-------------------- 
+                        EYES CONTAINER
+                    ---------------------->                        
+                    <div class="my-container eye-vessels">
+                        
+                        <div class="eye-vessel-child my-auto" style="max-width: 350px;margin: auto;">
+                            <img id="eyesIndicator" src="./images/heart.png" alt="heart" style="width: 15px;height: 15px;position: absolute;display: none;" />
+                            <div>
+                                <img id="eyes1" onClick="setEyes('female_eyes_black.png', 'eyes1')" src="images/thumbnails/eyes/th_female_eyes_black.png" alt="eye1">
+                            </div>
+                            <div>
+                                <img id="eyes2" onClick="setEyes('female_eyes_blue.png', 'eyes2')" src="images/thumbnails/eyes/th_female_eyes_blue.png" alt="eye2">
+                            </div>
+                            <div>
+                                <img id="eyes3" onClick="setEyes('female_eyes_brown.png', 'eyes3')" src="images/thumbnails/eyes/th_female_eyes_brown.png" alt="eye3">
+                            </div>
+                            <div>
+                                <img id="eyes4" onClick="setEyes('male_eyes_black.png', 'eyes4')" src="images/thumbnails/eyes/th_male_eyes_black.png" alt="eye4">
+                            </div>
+                            <div>
+                                <img id="eyes5" onClick="setEyes('male_eyes_blue.png', 'eyes5')" src="images/thumbnails/eyes/th_male_eyes_blue.png" alt="eye5">
+                            </div>
+                            <div>
+                                <img id="eyes6" onClick="setEyes('male_eyes_brown.png', 'eyes6')" src="images/thumbnails/eyes/th_male_eyes_brown.png" alt="eye6">
+                            </div>                                                    
+                        </div>                   
+                    </div>
+                    <br>
+					
+					<!-------------------- 
+                        NOSE CONTAINER
+                    ---------------------->                        
+					<div class="my-container nose-vessel" style="max-width: 660px;margin: auto;">
+                        <img id="noseIndicator" src="./images/heart.png" alt="heart" style="width: 15px;height: 15px;position: absolute;display: none;" />
+                        <img id="nose1" onClick="setNose('nose_1.png', 'nose1')" src="images/thumbnails/nose/th_nose_1.png" alt="nosee1" >
+                        <img id="nose2" onClick="setNose('nose_2.png', 'nose2')" src="images/thumbnails/nose/th_nose_2.png" alt="nosee2" >
+                        <img id="nose3" onClick="setNose('nose_3.png', 'nose3')" src="images/thumbnails/nose/th_nose_3.png" alt="nosee3" >
+                        <img id="nose4" onClick="setNose('nose_4.png', 'nose4')" src="images/thumbnails/nose/th_nose_4.png" alt="nosee4" >
+                        <img id="nose5" onClick="setNose('nose_5.png', 'nose5')" src="images/thumbnails/nose/th_nose_5.png" alt="nosee5" >
+                        <img id="nose6" onClick="setNose('nose_6.png', 'nose6')" src="images/thumbnails/nose/th_nose_6.png" alt="nosee6" >
+					</div>
+					<br>
+					
+					<!-------------------- 
+                        LIPS CONTAINER
+                    ---------------------->    
+					 <div class="my-container lips-vessel">
+                        
+                        <div class="lips-vessel-child my-auto" style="max-width: 350px;margin: auto;">
+							<!--- BROWN --->
+                            <div>
+                            <img id="lipsIndicator" src="./images/heart.png" alt="heart" style="width: 15px;height: 15px;position: absolute;display: none;" />
+                        </div>
+                            <div>
+                                <img id="lips1" onClick="setLips('lips_brown_1.png', 'lips1')" src="images/thumbnails/lips/th_lips_brown_1.png" alt="lips1">
+                            </div>
+                            <div>
+                                <img id="lips2" onClick="setLips('lips_brown_2.png', 'lips2')" src="images/thumbnails/lips/th_lips_brown_2.png" alt="lips2">
+                            </div>
+                            <div>
+                                <img id="lips3" onClick="setLips('lips_brown_3.png', 'lips3')" src="images/thumbnails/lips/th_lips_brown_3.png" alt="lips3">
+                            </div>
+                            <div>
+                                <img id="lips4" onClick="setLips('lips_brown_4.png', 'lips4')" src="images/thumbnails/lips/th_lips_brown_4.png" alt="lips4">
+                            </div>
+                            <div>
+                                <img id="lips5" onClick="setLips('lips_brown_5.png', 'lips5')" src="images/thumbnails/lips/th_lips_brown_5.png" alt="lips5">
+                            </div>
+							
+							<!--- DARK BROWN --->
+							<div>
+                                <img id="lips6" onClick="setLips('lips_darkbrown_1.png', 'lips6')" src="images/thumbnails/lips/th_lips_darkbrown_1.png" alt="lips6">
+                            </div>
+                            <div>
+                                <img id="lips7" onClick="setLips('lips_darkbrown_2.png', 'lips7')" src="images/thumbnails/lips/th_lips_darkbrown_2.png" alt="lips7">
+                            </div>
+                            <div>
+                                <img id="lips8" onClick="setLips('lips_darkbrown_3.png', 'lips8')" src="images/thumbnails/lips/th_lips_darkbrown_3.png" alt="lips8">
+                            </div>
+                            <div>
+                                <img id="lips9" onClick="setLips('lips_darkbrown_4.png', 'lips9')" src="images/thumbnails/lips/th_lips_darkbrown_4.png" alt="lips9">
+                            </div>
+                            <div>
+                                <img id="lips10" onClick="setLips('lips_darkbrown_5.png', 'lips10')" src="images/thumbnails/lips/th_lips_darkbrown_5.png" alt="lips10">
+                            </div>
+							
+							<!--- NUDE --->
+							<div>
+                                <img id="lips11" onClick="setLips('lips_nude_1.png', 'lips11')" src="images/thumbnails/lips/th_lips_nude_1.png" alt="lips11">
+                            </div>
+                            <div>
+                                <img id="lips12" onClick="setLips('lips_nude_2.png', 'lips12')" src="images/thumbnails/lips/th_lips_nude_2.png" alt="lips12">
+                            </div>
+                            <div>
+                                <img id="lips13" onClick="setLips('lips_nude_3.png', 'lips13')" src="images/thumbnails/lips/th_lips_nude_3.png" alt="lips13">
+                            </div>
+                            <div>
+                                <img id="lips14" onClick="setLips('lips_nude_4.png', 'lips14')" src="images/thumbnails/lips/th_lips_nude_4.png" alt="lips14">
+                            </div>
+                            <div>
+                                <img id="lips15" onClick="setLips('lips_nude_5.png', 'lips15')" src="images/thumbnails/lips/th_lips_nude_5.png" alt="lips15">
+                            </div> 
+							
+							<!--- PURPLE --->
+							<div>
+                                <img id="lips16" onClick="setLips('lips_purple_1.png', 'lips16')" src="images/thumbnails/lips/th_lips_purple_1.png" alt="lips16">
+                            </div>
+                            <div>
+                                <img id="lips17" onClick="setLips('lips_purple_2.png', 'lips17')" src="images/thumbnails/lips/th_lips_purple_2.png" alt="lips17">
+                            </div>
+                            <div>
+                                <img id="lips18" onClick="setLips('lips_purple_3.png', 'lips18')" src="images/thumbnails/lips/th_lips_purple_3.png" alt="lips18">
+                            </div>
+                            <div>
+                                <img id="lips19" onClick="setLips('lips_purple_4.png', 'lips19')" src="images/thumbnails/lips/th_lips_purple_4.png" alt="lips19">
+                            </div>
+                            <div>
+                                <img id="lips20" onClick="setLips('lips_purple_5.png', 'lips20')" src="images/thumbnails/lips/th_lips_purple_5.png" alt="lips20">
+                            </div>
+							
+							<!--- ORANGE --->
+							<div>
+                                <img id="lips21" onClick="setLips('lips_orange_1.png', 'lips21')" src="images/thumbnails/lips/th_lips_orange_1.png" alt="lips21">
+                            </div>
+                            <div>
+                                <img id="lips22" onClick="setLips('lips_orange_2.png', 'lips22')" src="images/thumbnails/lips/th_lips_orange_2.png" alt="lips22">
+                            </div>
+                            <div>
+                                <img id="lips23" onClick="setLips('lips_orange_3.png', 'lips23')" src="images/thumbnails/lips/th_lips_orange_3.png" alt="lips23">
+                            </div>
+                            <div>
+                                <img id="lips24" onClick="setLips('lips_orange_4.png', 'lips24')" src="images/thumbnails/lips/th_lips_orange_4.png" alt="lips24">
+                            </div>
+                            <div>
+                                <img id="lips25" onClick="setLips('lips_orange_5.png', 'lips25')" src="images/thumbnails/lips/th_lips_orange_5.png" alt="lips25">
+                            </div>
+                        </div>                   
+                    </div><!---end lips--->
+					<br>
+
+					<!--------------------
+                        MUSTACHE CONTAINER
+                    ---------------------->                    
+                    <div class="my-container mustache-vessels d-flex">
+                        <div class="mustache-vessel-child" style="max-width: 350px;margin: auto;">
+                            <img id="mustacheIndicator" src="./images/heart.png" alt="heart" style="width: 15px;height: 15px;position: absolute;display: none;" />
+                            <div class="my-auto">
+                                <img id="mustache1" onClick="setMust('mustache_black_1.png', 'mustache1')" src="images/thumbnails/mustache/th_mustache_black_1.png" alt="mustache1">
+                            </div>
+                            <div>
+                                <img id="mustache2" onClick="setMust('mustache_black_2.png', 'mustache2')" src="images/thumbnails/mustache/th_mustache_black_2.png" alt="mustache2">
+                            </div>
+                            <div>
+                                <img id="mustache3" onClick="setMust('mustache_black_3.png', 'mustache3')" src="images/thumbnails/mustache/th_mustache_black_3.png" alt="mustache3">
+                            </div>
+                            <div>
+                                <img id="mustache4" onClick="setMust('mustache_brown_1.png', 'mustache4')" src="images/thumbnails/mustache/th_mustache_brown_1.png" alt="mustache4">
+                            </div>
+                            <div>
+                                <img id="mustache5" onClick="setMust('mustache_brown_2.png', 'mustache5')" src="images/thumbnails/mustache/th_mustache_brown_2.png" alt="mustache5">
+                            </div>
+                            <div>
+                                <img id="mustache6" onClick="setMust('mustache_brown_3.png', 'mustache6')" src="images/thumbnails/mustache/th_mustache_brown_3.png" alt="mustache6">
+                            </div>
+							<div>
+                                <img id="mustache7" onClick="setMust('mustache_blonde_1.png', 'mustache7')" src="images/thumbnails/mustache/th_mustache_blonde_1.png" alt="mustache7">
+                            </div>
+                            <div>
+                                <img id="mustache8" onClick="setMust('mustache_blonde_2.png', 'mustache8')" src="images/thumbnails/mustache/th_mustache_blonde_2.png" alt="mustache8">
+                            </div>
+                            <div>
+                                <img id="mustache9" onClick="setMust('mustache_blonde_3.png', 'mustache9')" src="images/thumbnails/mustache/th_mustache_blonde_3.png" alt="mustache9">
+                            </div>  
+                        </div>                   
+                    </div> <!---end mustache--->
+					<br>
+				
+					<!-------------------- 
+                        BEARDS CONTAINER
+                    ---------------------->                    
+                    <div class="my-container beard-vessels">
+                        <div class="beard-vessel-child" style="max-width: 350px;margin: auto;">
+                            <img id="beardIndicator" src="./images/heart.png" alt="heart" style="width: 15px;height: 15px;position: absolute;display: none;">
+                            <div>
+                                <img id="beard1" onClick="setBeard('beard_black_3.png', 'beard1')" src="images/thumbnails/beard/th_beard_black_3.png" alt="beard1">
+                            </div>
+                            <div>
+                                <img id="beard2" onClick="setBeard('beard_black_1.png', 'beard2')" src="images/thumbnails/beard/th_beard_black_1.png" alt="beard2">
+                            </div>
+                            <div>
+                                <img id="beard3" onClick="setBeard('beard_black_2.png', 'beard3')" src="images/thumbnails/beard/th_beard_black_2.png" alt="beard3">
+                            </div>
+                            <div>
+                                <img id="beard4" onClick="setBeard('beard_brown_3.png', 'beard4')" src="images/thumbnails/beard/th_beard_brown_3.png" alt="beard4">
+                            </div>
+                            <div>
+                                <img id="beard5" onClick="setBeard('beard_brown_1.png', 'beard5')" src="images/thumbnails/beard/th_beard_brown_1.png" alt="beard5">
+                            </div>
+                            <div>
+                                <img id="beard6" onClick="setBeard('beard_brown_2.png', 'beard6')" src="images/thumbnails/beard/th_beard_brown_2.png" alt="beard6">
+                            </div>
+							<div>
+                                <img id="beard7" onClick="setBeard('beard_blonde_3.png', 'beard7')" src="images/thumbnails/beard/th_beard_blonde_3.png" alt="beard7">
+                            </div>
+                            <div>
+                                <img id="beard8" onClick="setBeard('beard_blonde_1.png', 'beard8')" src="images/thumbnails/beard/th_beard_blonde_1.png" alt="beard8">
+                            </div>
+                            <div>
+                                <img id="beard9" onClick="setBeard('beard_blonde_2.png', 'beard9')" src="images/thumbnails/beard/th_beard_blonde_2.png" alt="beard9">
+                            </div>  
+                        </div>                   
+                    </div> <!---end beard--->
+					<br>
+                   
+                                                     
+                </div><!-----end col-left--->
+                <div class="col-sm-6 mx-auto text-center">
+					
+                    <!--------------------
+                        RESULT CONTAINER
+                    ---------------------->
+               <div class="my-container result text-center" style="height: 500px;width: 500px;">
+                    <div id="builder">
+                           
+                        <div id="head"></div>
+						<div id="eyebrow"></div>
+                        <div id="eyes"></div>
+						<div id="nose"></div>
+						<div id="lips"></div>
+						<div id="beard"></div>
+						<div id="acc"></div>
+						<div id="headpc"></div>
+						<div id="mustache"></div>
+                        <div id="color-options"></div>
+                                                                
+                    </div>
+                </div>
+				<div id="showcase-button">
+                <button class="btn" onClick="showAvatar()">showcase</button>
+				</div>
+                <br>
+					
+					<!----------------------------------------
+                        END OF RESULT CONTAINER
+                    ------------------------------------------>
+                    <div class="my-container headpc-vessel">
+                        <img id="headpcIndicator" src="./images/heart.png" alt="heart" style="width: 15px;height: 15px;position: absolute;display: none;" />
+                        <img id="headpc1" onClick="setHeadpc('headpc_ears.png', 'headpc1')" src="images/thumbnails/headpc/th_headpc_ears.png" alt="headpc1">
+                        <img id="headpc2" onClick="setHeadpc('headpc_flower.png', 'headpc2')" src="images/thumbnails/headpc/th_headpc_flower.png" alt="headpc2">
+                        <img id="headpc3" onClick="setHeadpc('headpc_santa.png', 'headpc3')" src="images/thumbnails/headpc/th_headpc_santa.png" alt="headpc3">
+                    </div>
+                    <br>
+					
+					 <!--------------------
+                        SHADES CONTAINER
+                    ---------------------->
+                    <div class="my-container shades-vessels"> 
+                        <div class="shades-vessel-child" style="max-width: 350px;margin: auto;">
+                            <img id="shadeIndicator" src="./images/heart.png" alt="heart" style="width: 15px;height: 15px;position: absolute;display: none;" />
+                            <div>
+                                <img id="acc1" onClick="setAcc('acc_eyeglass_1.png', 'acc1')" src="images/thumbnails/acc/th_acc_eyeglass_1.png" alt="acc1">
+                            </div>
+                            <div>
+                                <img id="acc2" onClick="setAcc('acc_eyeglass_2.png', 'acc2')" src="images/thumbnails/acc/th_acc_eyeglass_2.png" alt="acc2">
+                            </div>
+                            <div>
+                                <img id="acc3" onClick="setAcc('acc_eyeglass_3.png', 'acc3')" src="images/thumbnails/acc/th_acc_eyeglass_3.png" alt="acc3">
+                            </div>
+                            <div>
+                                <img id="acc4" onClick="setAcc('acc_sunglass_1.png', 'acc4')" src="images/thumbnails/acc/th_acc_sunglass_1.png" alt="acc4">
+                            </div>
+                            <div>
+                                <img id="acc5" onClick="setAcc('acc_sunglass_2.png', 'acc5')" src="images/thumbnails/acc/th_acc_sunglass_2.png" alt="acc5">
+                            </div>
+                            <div>
+                                <img id="acc6" onClick="setAcc('acc_sunglass_3.png', 'acc6')" src="images/thumbnails/acc/th_acc_sunglass_3.png" alt="acc6">
+                            </div>                                                    
+                        </div>                   
+                    </div> <!---end shades--->
+                </div><!---end col-right--->
+            </div><!----end row container--->
+
+        </div><!-- END Container -->
+    </section>
+	
+    <!-- MODAL -->
+    <div class="modal fade" id="avatarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered showCaseModalContainer" role="document">
+        <div class="modal-content my-container">
+            <button style="text-align: right;padding-right: 10px;" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>     
+            <div class="modal-body mx-auto text-center">
+                <h1 class="modal_title mx-auto">make your avatar!</h1>   
+                <p>Generate your avatar or make cool new faces using this avatar maker and showcase it to the world!</p>
+            </div>
+        </div>
+        </div>
+    </div>    
+
+    <div class="modal fade" id="showcaseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content my-container" >
+            <button style="text-align: right;padding-right: 10px;" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>     
+            <div class="modal-body" id="showcase">
+
+            </div>
+        </div>
+        </div>
+    </div>      
+    <footer class="my-container footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a href="#" class="link-primary">Link #1</a>
+                </div>
+                <div class="col">
+                    <a href="#" class="link-primary">Link #2</a>
+                </div>
+                <div class="col">
+                    <a href="#" class="link-primary">Link #3</a>
+                </div>
+                <div class="col">
+                    <a href="#" class="link-primary">Link #4</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/imageswapper.js"></script>
+</body>
+</html>
